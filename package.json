@@ -1,0 +1,126 @@
+{
+  "name": "@stdlib/blas-ext-fill-range",
+  "version": "0.0.0",
+  "description": "Fill an input ndarray with a specified value along an ndarray dimension.",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "The Stdlib Authors",
+    "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
+  },
+  "contributors": [
+    {
+      "name": "The Stdlib Authors",
+      "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
+    }
+  ],
+  "main": "./lib",
+  "directories": {
+    "benchmark": "./benchmark",
+    "doc": "./docs",
+    "example": "./examples",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "types": "./docs/types",
+  "scripts": {
+    "test": "make test",
+    "test-cov": "make test-cov",
+    "examples": "make examples",
+    "benchmark": "make benchmark"
+  },
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/blas-ext-fill-range.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "dependencies": {
+    "@stdlib/assert-has-own-property": "^0.2.3",
+    "@stdlib/assert-is-integer": "^0.2.3",
+    "@stdlib/assert-is-ndarray-like": "^0.2.3",
+    "@stdlib/assert-is-plain-object": "^0.2.3",
+    "@stdlib/blas-ext-base-ndarray-cfill": "github:stdlib-js/blas-ext-base-ndarray-cfill#main",
+    "@stdlib/blas-ext-base-ndarray-dfill": "github:stdlib-js/blas-ext-base-ndarray-dfill#main",
+    "@stdlib/blas-ext-base-ndarray-gfill": "github:stdlib-js/blas-ext-base-ndarray-gfill#main",
+    "@stdlib/blas-ext-base-ndarray-sfill": "github:stdlib-js/blas-ext-base-ndarray-sfill#main",
+    "@stdlib/blas-ext-base-ndarray-zfill": "github:stdlib-js/blas-ext-base-ndarray-zfill#main",
+    "@stdlib/ndarray-base-assert-is-equal-data-type": "^0.1.1",
+    "@stdlib/ndarray-base-assert-is-mostly-safe-data-type-cast": "^0.3.1",
+    "@stdlib/ndarray-base-assert-is-scalar-mostly-safe-compatible": "^0.1.1",
+    "@stdlib/ndarray-base-assign": "^0.2.1",
+    "@stdlib/ndarray-base-broadcast-scalar": "^0.2.4",
+    "@stdlib/ndarray-base-complement-shape": "^0.1.1",
+    "@stdlib/ndarray-base-empty": "^0.3.2",
+    "@stdlib/ndarray-base-maybe-broadcast-array": "^0.2.5",
+    "@stdlib/ndarray-base-normalize-index": "^0.2.3",
+    "@stdlib/ndarray-base-nullary-strided1d-dispatch-factory": "^0.0.1",
+    "@stdlib/ndarray-defaults": "^0.4.1",
+    "@stdlib/ndarray-dtype": "^0.2.3",
+    "@stdlib/ndarray-dtypes": "^0.4.1",
+    "@stdlib/ndarray-order": "^0.2.3",
+    "@stdlib/ndarray-shape": "^0.2.3",
+    "@stdlib/string-format": "^0.2.3",
+    "@stdlib/types": "^0.5.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
+  },
+  "devDependencies": {
+    "@stdlib/array-complex128": "^0.3.2",
+    "@stdlib/array-complex64": "^0.3.2",
+    "@stdlib/array-float32": "^0.2.3",
+    "@stdlib/array-float64": "^0.2.3",
+    "@stdlib/array-int32": "^0.2.3",
+    "@stdlib/assert-is-same-array": "^0.2.3",
+    "@stdlib/assert-is-same-complex128array": "^0.2.3",
+    "@stdlib/assert-is-same-complex64array": "^0.2.3",
+    "@stdlib/assert-is-same-float32array": "^0.2.3",
+    "@stdlib/assert-is-same-float64array": "^0.2.3",
+    "@stdlib/complex-float64-ctor": "^0.1.2",
+    "@stdlib/math-base-assert-is-nan": "^0.2.3",
+    "@stdlib/math-base-special-pow": "^0.3.1",
+    "@stdlib/ndarray-ctor": "^0.3.1",
+    "@stdlib/ndarray-data-buffer": "^0.2.3",
+    "@stdlib/ndarray-from-scalar": "^0.3.1",
+    "@stdlib/ndarray-to-array": "^0.2.2",
+    "@stdlib/ndarray-zeros": "^0.3.1",
+    "@stdlib/random-discrete-uniform": "^0.1.1",
+    "@stdlib/random-uniform": "^0.1.1",
+    "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
+    "istanbul": "^0.4.1",
+    "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
+    "@stdlib/bench-harness": "^0.2.3"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">2.7.0"
+  },
+  "os": [
+    "aix",
+    "darwin",
+    "freebsd",
+    "linux",
+    "macos",
+    "openbsd",
+    "sunos",
+    "win32",
+    "windows"
+  ],
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "blas",
+    "extended",
+    "fill",
+    "range",
+    "set",
+    "assign",
+    "ndarray"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/stdlib"
+  }
+}
