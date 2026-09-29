@@ -38,19 +38,19 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/blas/ext/fill-range"
-%% click B href "https://github.com/stdlib-js/blas-ext-fill-range/tree/main"
-%% click C href "https://github.com/stdlib-js/blas-ext-fill-range/tree/production"
-%% click D href "https://github.com/stdlib-js/blas-ext-fill-range/tree/esm"
-%% click E href "https://github.com/stdlib-js/blas-ext-fill-range/tree/deno"
-%% click F href "https://github.com/stdlib-js/blas-ext-fill-range/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/blas/ext/fill-between"
+%% click B href "https://github.com/stdlib-js/blas-ext-fill-between/tree/main"
+%% click C href "https://github.com/stdlib-js/blas-ext-fill-between/tree/production"
+%% click D href "https://github.com/stdlib-js/blas-ext-fill-between/tree/esm"
+%% click E href "https://github.com/stdlib-js/blas-ext-fill-between/tree/deno"
+%% click F href "https://github.com/stdlib-js/blas-ext-fill-between/tree/umd"
 ```
 
-[stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/blas/ext/fill-range
-[production-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/production
-[deno-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/deno
-[deno-readme]: https://github.com/stdlib-js/blas-ext-fill-range/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/umd
-[umd-readme]: https://github.com/stdlib-js/blas-ext-fill-range/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/esm
-[esm-readme]: https://github.com/stdlib-js/blas-ext-fill-range/blob/esm/README.md
+[stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/blas/ext/fill-between
+[production-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/production
+[deno-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/deno
+[deno-readme]: https://github.com/stdlib-js/blas-ext-fill-between/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/umd
+[umd-readme]: https://github.com/stdlib-js/blas-ext-fill-between/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/esm
+[esm-readme]: https://github.com/stdlib-js/blas-ext-fill-between/blob/esm/README.md

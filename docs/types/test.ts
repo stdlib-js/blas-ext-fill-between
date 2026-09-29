@@ -21,29 +21,29 @@
 /// <reference types="@stdlib/types"/>
 
 import zeros = require( '@stdlib/ndarray-zeros' );
-import fillRange = require( './index' );
+import fillBetween = require( './index' );
 
 
 // TESTS //
 
 // The function returns an ndarray...
 {
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0 ); // $ExpectType float64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, {} ); // $ExpectType float64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0 ); // $ExpectType float64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0, {} ); // $ExpectType float64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0, 2 ); // $ExpectType float64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0, 2, {} ); // $ExpectType float64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float32' } ), 10.0 ); // $ExpectType float32ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'float32' } ), 10.0, {} ); // $ExpectType float32ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'int32' } ), 10 ); // $ExpectType int32ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'int32' } ), 10, {} ); // $ExpectType int32ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'complex128' } ), 10.0 ); // $ExpectType complex128ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'complex128' } ), 10.0, {} ); // $ExpectType complex128ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'complex64' } ), 10.0 ); // $ExpectType complex64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'complex64' } ), 10.0, {} ); // $ExpectType complex64ndarray
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'generic' } ), 10.0 ); // $ExpectType genericndarray<number>
-	fillRange( zeros( [ 2, 2 ], { 'dtype': 'generic' } ), 10.0, {} ); // $ExpectType genericndarray<number>
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0 ); // $ExpectType float64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, {} ); // $ExpectType float64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0 ); // $ExpectType float64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0, {} ); // $ExpectType float64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0, 2 ); // $ExpectType float64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float64' } ), 10.0, 0, 2, {} ); // $ExpectType float64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float32' } ), 10.0 ); // $ExpectType float32ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'float32' } ), 10.0, {} ); // $ExpectType float32ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'int32' } ), 10 ); // $ExpectType int32ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'int32' } ), 10, {} ); // $ExpectType int32ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'complex128' } ), 10.0 ); // $ExpectType complex128ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'complex128' } ), 10.0, {} ); // $ExpectType complex128ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'complex64' } ), 10.0 ); // $ExpectType complex64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'complex64' } ), 10.0, {} ); // $ExpectType complex64ndarray
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'generic' } ), 10.0 ); // $ExpectType genericndarray<number>
+	fillBetween( zeros( [ 2, 2 ], { 'dtype': 'generic' } ), 10.0, {} ); // $ExpectType genericndarray<number>
 }
 
 // The function returns an ndarray when provided ndarray value and index arguments...
@@ -52,33 +52,33 @@ import fillRange = require( './index' );
 		'dtype': 'float64'
 	});
 
-	fillRange( x, x ); // $ExpectType float64ndarray
-	fillRange( x, x, {} ); // $ExpectType float64ndarray
-	fillRange( x, x, x ); // $ExpectType float64ndarray
-	fillRange( x, x, x, {} ); // $ExpectType float64ndarray
-	fillRange( x, x, x, x ); // $ExpectType float64ndarray
-	fillRange( x, x, x, x, {} ); // $ExpectType float64ndarray
+	fillBetween( x, x ); // $ExpectType float64ndarray
+	fillBetween( x, x, {} ); // $ExpectType float64ndarray
+	fillBetween( x, x, x ); // $ExpectType float64ndarray
+	fillBetween( x, x, x, {} ); // $ExpectType float64ndarray
+	fillBetween( x, x, x, x ); // $ExpectType float64ndarray
+	fillBetween( x, x, x, x, {} ); // $ExpectType float64ndarray
 }
 
 // The compiler throws an error if the function is provided a first argument which is not an ndarray...
 {
-	fillRange( '5', 10.0 ); // $ExpectError
-	fillRange( 5, 10.0 ); // $ExpectError
-	fillRange( true, 10.0 ); // $ExpectError
-	fillRange( false, 10.0 ); // $ExpectError
-	fillRange( null, 10.0 ); // $ExpectError
-	fillRange( void 0, 10.0 ); // $ExpectError
-	fillRange( {}, 10.0 ); // $ExpectError
-	fillRange( ( x: number ): number => x, 10.0 ); // $ExpectError
+	fillBetween( '5', 10.0 ); // $ExpectError
+	fillBetween( 5, 10.0 ); // $ExpectError
+	fillBetween( true, 10.0 ); // $ExpectError
+	fillBetween( false, 10.0 ); // $ExpectError
+	fillBetween( null, 10.0 ); // $ExpectError
+	fillBetween( void 0, 10.0 ); // $ExpectError
+	fillBetween( {}, 10.0 ); // $ExpectError
+	fillBetween( ( x: number ): number => x, 10.0 ); // $ExpectError
 
-	fillRange( '5', 10.0, {} ); // $ExpectError
-	fillRange( 5, 10.0, {} ); // $ExpectError
-	fillRange( true, 10.0, {} ); // $ExpectError
-	fillRange( false, 10.0, {} ); // $ExpectError
-	fillRange( null, 10.0, {} ); // $ExpectError
-	fillRange( void 0, 10.0, {} ); // $ExpectError
-	fillRange( {}, 10.0, {} ); // $ExpectError
-	fillRange( ( x: number ): number => x, 10.0, {} ); // $ExpectError
+	fillBetween( '5', 10.0, {} ); // $ExpectError
+	fillBetween( 5, 10.0, {} ); // $ExpectError
+	fillBetween( true, 10.0, {} ); // $ExpectError
+	fillBetween( false, 10.0, {} ); // $ExpectError
+	fillBetween( null, 10.0, {} ); // $ExpectError
+	fillBetween( void 0, 10.0, {} ); // $ExpectError
+	fillBetween( {}, 10.0, {} ); // $ExpectError
+	fillBetween( ( x: number ): number => x, 10.0, {} ); // $ExpectError
 }
 
 // The compiler throws an error if the function is provided a start index argument which is not an ndarray or integer...
@@ -87,26 +87,26 @@ import fillRange = require( './index' );
 		'dtype': 'float64'
 	});
 
-	fillRange( x, 10.0, '5' ); // $ExpectError
-	fillRange( x, 10.0, true ); // $ExpectError
-	fillRange( x, 10.0, false ); // $ExpectError
-	fillRange( x, 10.0, null ); // $ExpectError
-	fillRange( x, 10.0, [] ); // $ExpectError
-	fillRange( x, 10.0, ( x: number ): number => x ); // $ExpectError
+	fillBetween( x, 10.0, '5' ); // $ExpectError
+	fillBetween( x, 10.0, true ); // $ExpectError
+	fillBetween( x, 10.0, false ); // $ExpectError
+	fillBetween( x, 10.0, null ); // $ExpectError
+	fillBetween( x, 10.0, [] ); // $ExpectError
+	fillBetween( x, 10.0, ( x: number ): number => x ); // $ExpectError
 
-	fillRange( x, 10.0, '5', {} ); // $ExpectError
-	fillRange( x, 10.0, true, {} ); // $ExpectError
-	fillRange( x, 10.0, false, {} ); // $ExpectError
-	fillRange( x, 10.0, null, {} ); // $ExpectError
-	fillRange( x, 10.0, [], {} ); // $ExpectError
-	fillRange( x, 10.0, ( x: number ): number => x, {} ); // $ExpectError
+	fillBetween( x, 10.0, '5', {} ); // $ExpectError
+	fillBetween( x, 10.0, true, {} ); // $ExpectError
+	fillBetween( x, 10.0, false, {} ); // $ExpectError
+	fillBetween( x, 10.0, null, {} ); // $ExpectError
+	fillBetween( x, 10.0, [], {} ); // $ExpectError
+	fillBetween( x, 10.0, ( x: number ): number => x, {} ); // $ExpectError
 
-	fillRange( x, 10.0, '5', 2, {} ); // $ExpectError
-	fillRange( x, 10.0, true, 2, {} ); // $ExpectError
-	fillRange( x, 10.0, false, 2, {} ); // $ExpectError
-	fillRange( x, 10.0, null, 2, {} ); // $ExpectError
-	fillRange( x, 10.0, [], 2, {} ); // $ExpectError
-	fillRange( x, 10.0, ( x: number ): number => x, 2, {} ); // $ExpectError
+	fillBetween( x, 10.0, '5', 2, {} ); // $ExpectError
+	fillBetween( x, 10.0, true, 2, {} ); // $ExpectError
+	fillBetween( x, 10.0, false, 2, {} ); // $ExpectError
+	fillBetween( x, 10.0, null, 2, {} ); // $ExpectError
+	fillBetween( x, 10.0, [], 2, {} ); // $ExpectError
+	fillBetween( x, 10.0, ( x: number ): number => x, 2, {} ); // $ExpectError
 }
 
 // The compiler throws an error if the function is provided an end index argument which is not an ndarray or integer...
@@ -115,12 +115,12 @@ import fillRange = require( './index' );
 		'dtype': 'float64'
 	});
 
-	fillRange( x, 10.0, 0, '5', {} ); // $ExpectError
-	fillRange( x, 10.0, 0, true, {} ); // $ExpectError
-	fillRange( x, 10.0, 0, false, {} ); // $ExpectError
-	fillRange( x, 10.0, 0, null, {} ); // $ExpectError
-	fillRange( x, 10.0, 0, [], {} ); // $ExpectError
-	fillRange( x, 10.0, 0, ( x: number ): number => x, {} ); // $ExpectError
+	fillBetween( x, 10.0, 0, '5', {} ); // $ExpectError
+	fillBetween( x, 10.0, 0, true, {} ); // $ExpectError
+	fillBetween( x, 10.0, 0, false, {} ); // $ExpectError
+	fillBetween( x, 10.0, 0, null, {} ); // $ExpectError
+	fillBetween( x, 10.0, 0, [], {} ); // $ExpectError
+	fillBetween( x, 10.0, 0, ( x: number ): number => x, {} ); // $ExpectError
 }
 
 // The compiler throws an error if the function is provided an options argument which is not an object...
@@ -129,19 +129,19 @@ import fillRange = require( './index' );
 		'dtype': 'float64'
 	});
 
-	fillRange( x, 10.0, 0, '5' ); // $ExpectError
-	fillRange( x, 10.0, 0, true ); // $ExpectError
-	fillRange( x, 10.0, 0, false ); // $ExpectError
-	fillRange( x, 10.0, 0, null ); // $ExpectError
-	fillRange( x, 10.0, 0, [] ); // $ExpectError
-	fillRange( x, 10.0, 0, ( x: number ): number => x ); // $ExpectError
+	fillBetween( x, 10.0, 0, '5' ); // $ExpectError
+	fillBetween( x, 10.0, 0, true ); // $ExpectError
+	fillBetween( x, 10.0, 0, false ); // $ExpectError
+	fillBetween( x, 10.0, 0, null ); // $ExpectError
+	fillBetween( x, 10.0, 0, [] ); // $ExpectError
+	fillBetween( x, 10.0, 0, ( x: number ): number => x ); // $ExpectError
 
-	fillRange( x, 10.0, 0, 2, '5' ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, true ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, false ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, null ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, [] ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, ( x: number ): number => x ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, '5' ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, true ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, false ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, null ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, [] ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, ( x: number ): number => x ); // $ExpectError
 }
 
 // The compiler throws an error if the function is provided an invalid `dim` option...
@@ -150,21 +150,21 @@ import fillRange = require( './index' );
 		'dtype': 'float64'
 	});
 
-	fillRange( x, 10.0, { 'dim': '5' } ); // $ExpectError
-	fillRange( x, 10.0, { 'dim': true } ); // $ExpectError
-	fillRange( x, 10.0, { 'dim': false } ); // $ExpectError
-	fillRange( x, 10.0, { 'dim': null } ); // $ExpectError
-	fillRange( x, 10.0, { 'dim': [] } ); // $ExpectError
-	fillRange( x, 10.0, { 'dim': {} } ); // $ExpectError
-	fillRange( x, 10.0, { 'dim': ( x: number ): number => x } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': '5' } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': true } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': false } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': null } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': [] } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': {} } ); // $ExpectError
+	fillBetween( x, 10.0, { 'dim': ( x: number ): number => x } ); // $ExpectError
 
-	fillRange( x, 10.0, 0, 2, { 'dim': '5' } ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, { 'dim': true } ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, { 'dim': false } ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, { 'dim': null } ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, { 'dim': [] } ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, { 'dim': {} } ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, { 'dim': ( x: number ): number => x } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': '5' } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': true } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': false } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': null } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': [] } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': {} } ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, { 'dim': ( x: number ): number => x } ); // $ExpectError
 }
 
 // The compiler throws an error if the function is provided an unsupported number of arguments...
@@ -173,7 +173,7 @@ import fillRange = require( './index' );
 		'dtype': 'float64'
 	});
 
-	fillRange(); // $ExpectError
-	fillRange( x ); // $ExpectError
-	fillRange( x, 10.0, 0, 2, {}, {} ); // $ExpectError
+	fillBetween(); // $ExpectError
+	fillBetween( x ); // $ExpectError
+	fillBetween( x, 10.0, 0, 2, {}, {} ); // $ExpectError
 }

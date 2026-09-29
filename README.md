@@ -29,7 +29,7 @@ limitations under the License.
   <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
 </details>
 
-# fillRange
+# fillBetween
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -40,7 +40,7 @@ limitations under the License.
 ## Installation
 
 ```bash
-npm install @stdlib/blas-ext-fill-range
+npm install @stdlib/blas-ext-fill-between
 ```
 
 Alternatively,
@@ -60,10 +60,10 @@ To view installation and usage instructions specific to each branch build, be su
 ## Usage
 
 ```javascript
-var fillRange = require( '@stdlib/blas-ext-fill-range' );
+var fillBetween = require( '@stdlib/blas-ext-fill-between' );
 ```
 
-#### fillRange( x, value\[, start\[, end]]\[, options] )
+#### fillBetween( x, value\[, start\[, end]]\[, options] )
 
 Fills an input [ndarray][@stdlib/ndarray/ctor] with a specified value along an [ndarray][@stdlib/ndarray/ctor] dimension.
 
@@ -75,7 +75,7 @@ var x = array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 // returns <ndarray>[ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ]
 
 // Perform operation:
-var y = fillRange( x, 10.0, 1, 4 );
+var y = fillBetween( x, 10.0, 1, 4 );
 // returns <ndarray>[ 1.0, 10.0, 10.0, 10.0, 5.0, 6.0 ]
 
 var bool = ( x === y );
@@ -101,7 +101,7 @@ var array = require( '@stdlib/ndarray-array' );
 
 var x = array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 
-var y = fillRange( x, 10.0, -2 );
+var y = fillBetween( x, 10.0, -2 );
 // returns <ndarray>[ 1.0, 2.0, 3.0, 4.0, 10.0, 10.0 ]
 ```
 
@@ -112,7 +112,7 @@ var array = require( '@stdlib/ndarray-array' );
 
 var x = array( [ [ 1.0, 2.0, 3.0, 4.0 ], [ 5.0, 6.0, 7.0, 8.0 ] ] );
 
-var y = fillRange( x, array( [ 9.0, 10.0, 11.0, 12.0 ] ), {
+var y = fillBetween( x, array( [ 9.0, 10.0, 11.0, 12.0 ] ), {
     'dim': 0
 });
 // returns <ndarray>[ [ 9.0, 10.0, 11.0, 12.0 ], [ 9.0, 10.0, 11.0, 12.0 ] ]
@@ -141,7 +141,7 @@ var y = fillRange( x, array( [ 9.0, 10.0, 11.0, 12.0 ] ), {
 ```javascript
 var discreteUniform = require( '@stdlib/random-discrete-uniform' );
 var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var fillRange = require( '@stdlib/blas-ext-fill-range' );
+var fillBetween = require( '@stdlib/blas-ext-fill-between' );
 
 // Generate an ndarray of random numbers:
 var x = discreteUniform( [ 5, 5 ], 0, 20, {
@@ -150,7 +150,7 @@ var x = discreteUniform( [ 5, 5 ], 0, 20, {
 console.log( ndarray2array( x ) );
 
 // Perform operation:
-fillRange( x, 0, 1, 4, {
+fillBetween( x, 0, 1, 4, {
     'dim': 0
 });
 
@@ -206,19 +206,19 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-ext-fill-range.svg
-[npm-url]: https://npmjs.org/package/@stdlib/blas-ext-fill-range
+[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-ext-fill-between.svg
+[npm-url]: https://npmjs.org/package/@stdlib/blas-ext-fill-between
 
-[test-image]: https://github.com/stdlib-js/blas-ext-fill-range/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/blas-ext-fill-range/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/blas-ext-fill-between/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-ext-fill-between/actions/workflows/test.yml?query=branch:main
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-ext-fill-range/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/blas-ext-fill-range?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-ext-fill-between/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/blas-ext-fill-between?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-ext-fill-range.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/blas-ext-fill-range/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-ext-fill-between.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/blas-ext-fill-between/main
 
 -->
 
@@ -232,15 +232,15 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/deno
-[deno-readme]: https://github.com/stdlib-js/blas-ext-fill-range/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/umd
-[umd-readme]: https://github.com/stdlib-js/blas-ext-fill-range/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/blas-ext-fill-range/tree/esm
-[esm-readme]: https://github.com/stdlib-js/blas-ext-fill-range/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/blas-ext-fill-range/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/deno
+[deno-readme]: https://github.com/stdlib-js/blas-ext-fill-between/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/umd
+[umd-readme]: https://github.com/stdlib-js/blas-ext-fill-between/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/blas-ext-fill-between/tree/esm
+[esm-readme]: https://github.com/stdlib-js/blas-ext-fill-between/blob/esm/README.md
+[branches-url]: https://github.com/stdlib-js/blas-ext-fill-between/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-fill-range/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-fill-between/main/LICENSE
 
 [@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
